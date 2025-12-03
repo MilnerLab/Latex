@@ -1,0 +1,61 @@
+\begin{frame}{The slow centrifuge (sCFG)}
+\begin{columns}[T,onlytextwidth]
+\column{0.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{png/slow_centrifuge_config.PNG}
+\caption{$\theta_0$ is the angle between the input beam and the normal vector to the grating grooves (the grating orientation angle). Borrowed from MacPhail-Bartley et al. 2020. }
+\end{figure}
+\column{0.5\textwidth}
+Taking the limit of large stretching for the Gaussian envelope, the chirp applied by the grating pairs to the blue (+) and red (-) arms respectively is
+\onslide<2->{
+\begin{equation}
+\beta_{\pm} = -\frac{d^2\omega_0^3cos^2\theta_0}{16\pi^2l_{\pm}c}
+\end{equation}
+\textbf{Note:} GR\textsubscript{+} is at an effective distance $l_+$ from GR\textsubscript{0} which is negative! 
+
+Recall the centrifuge angular rotation frequency formula $\Omega(t) = 2\beta t$. Then using a $\lambda/2$ waveplate on the blue arm, followed by combination on the PBS and traversal of a $\lambda/4$ waveplate results in 
+\begin{equation}
+\dot{\Omega} = 2\beta = \beta_+ - \beta_- \geq 0
+\end{equation}
+}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Limitations of sCFG}
+\begin{equation*}
+\beta_{\pm} = -\frac{d^2\omega_0^3cos^2\theta_0}{16\pi^2l_{\pm}c}
+\end{equation*}
+sCFG has the following hard constraints:
+\begin{enumerate}
+\item Groove density $1/d$ is limited by manufacturing.
+\item $\theta_0 \lesssim 80^\circ$.
+\item $l_+ < f$.
+\end{enumerate}
+
+Choosing the appropriate parameters and building the setup such as to minimize the centrifuge acceleration resulted in $\beta = 0.017$ rad/ps\textsuperscript{2}. This is too high for dopant molecules in superfluid Helium because the terminal frequency is well beyond the centrifugal wall!
+
+\end{frame}
+
+\begin{frame}{The ultraslow centrifuge (usCFG)}
+\onslide<1->{
+\textbf{Idea}: Get a smaller $\dot{\Omega}$ from a smaller difference $\beta = (\beta_+ - \beta_-)/2$. But instead of actively applying equal and opposite chirps to two arms as in sCFG, we do the following.
+\begin{enumerate}
+\item \emph{Delay Arm}: use the nominal (positive) chirp, $\beta_0$ from the \textbf{uncompressed} pulses after CPA.
+\item \emph{Grating Arm}: use a double pass grating pair compressor to introduce a \textbf{small additional chirp} $\Delta\beta <0$. 
+\end{enumerate}
+Now, $\beta = (\beta_G - \beta_0)/2 = (\beta_0 + \Delta\beta - \beta_0)/2 = \Delta\beta/2$.
+If the delay arm has a controllable $\Delta t$ delay with respect to the grating arm, then we can tune the terminal frequency of the centrifuge independently of $\Delta\beta$.
+}\\
+
+\onslide<2->{Let $b$ be the perpendicular distance between the parallel gratings. See Board for rest of equations.}
+
+\end{frame}
+
+\begin{frame}{Optical schematic of usCFG}
+\begin{figure}
+    \centering 
+    \includegraphics[width=0.6\textwidth]{png/usCFG_schematic.PNG}
+    \caption{The grey boxes represent translation stages.This is a diagram in progress made by Kevin for usCFG draft. D\textsubscript{G} $:= b$ is the separation of gratings. The $\lambda/2$ plate at the input is only for power control. $\theta_0$ is not taken to scale.}
+\end{figure}
+\end{frame}

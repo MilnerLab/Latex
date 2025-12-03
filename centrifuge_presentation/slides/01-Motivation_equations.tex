@@ -1,0 +1,58 @@
+\begin{frame}{Rotating molecules - Classical Treatment}
+\onslide<1->{
+Assume low initial temperature (which is the case for dopant molecules in He nanodroplets). 
+Consider $\vec{E} = \hat{e}E_0cos\omega_0t$ and for simplicity a linear molecule with nonzero polarizability, $\alpha$ only along its axis, and moment of inertia $I$.  Averaging over a period $(2\pi/\omega_0)$ of the carrier oscillations, the molecule sees an angle dependent potential well
+\begin{equation}
+U(\theta) = -\frac{1}{4}E_0^2\alpha cos^2\theta =: U_0cos^2\theta.
+\end{equation}
+See Board for drawing.
+\begin{equation}
+|\vec{\tau}| = \frac{\partial U}{\partial \theta} = U_0sin2\theta\implies \varepsilon_{\text{mol}} =  \frac{|\vec{\tau}|}{I} \approx \frac{2U_0}{\pi I}.  
+\end{equation}}
+\onslide<2->{
+If $\hat{e}$ were to rotate with acceleration $\varepsilon_{\text{pol}}$, then it seems natural that trapping should occur when  
+\textbf{Adiabaticity condition}
+\begin{equation}
+\varepsilon_{\text{pol}} < \varepsilon_{\text{mol}} = \frac{2U_0}{\pi I}.
+\end{equation}
+
+Smaller $\varepsilon_{\text{pol}}$ becomes relevant when trying to rotate molecules with larger effective moments of inertia, such as molecules embedded in superfluid He. Centrifugal distortion can also increase the effective $I$ by a few orders of magnitude.}
+\end{frame}
+
+\begin{frame}{Basic Theory of Centrifuge}
+\onslide<1->{
+Consider two oppositely circularly polarized waves that have shifted carrier angular frequencies of $\pm \Omega(t)$.
+\begin{align}
+&\vec{E}_+ = \frac{E_0}{2}\{\hat{x}cos[(\omega_0+\Omega(t))t]+\hat{y}sin[(\omega_0+\Omega(t))t]\}\\&\vec{E}_- = \frac{E_0}{2}\{\hat{x}cos[(\omega_0-\Omega(t))t]-\hat{y}sin[(\omega_0-\Omega(t))t]\}
+\end{align}
+Superimposing them gives a wave whose polarization vector rotates not at the carrier angular frequency but at $\Omega(t)$. The resultant wave is the optical centrifuge, 
+
+\begin{equation}
+\vec{E}_{\text{CFG}} = \vec{E}_+ + \vec{E}_- = E_0 cos(\omega_0 t)[\hat{x}cos(\Omega(t)t) + \hat{y}sin(\Omega(t)t)]
+\end{equation}}
+We call $\Omega(t)$ the (instantaneous) rotational angular frequency of the centrifuge.
+\onslide<2->{
+\begin{enumerate}
+\item $\dot{\Omega} = 2\beta t,\;\beta>0$ is the conventional centrifuge $\implies$ accelerates the rotation of molecules (when $\dot{\Omega}$ not too large).
+\item $\dot{\Omega} = 0$ is the "constant frequency centrifuge" $\implies$ molecular rotation follows this constant frequency.
+\end{enumerate} 
+
+}
+\end{frame}
+
+\begin{frame}{Visualizing the centrifuge}
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{png/corkscrew.PNG}
+\caption{A depiction of the spatial and temporal behaviour of the conventional centrifuge propagating in the direction of the wavevector $\vec{k}$. Borrowed from MacPhail-Bartley et al. 2020.}
+\end{figure}
+\end{frame}
+
+\begin{frame}{When do the molecules follow the centrifuge?}
+The adiabaticity condition from earlier becomes
+
+\begin{equation}
+\frac{U_0}{\pi I\beta} = \frac{1}{4\pi}\times\frac{E_0^2}{\beta}\times\frac{\Delta\alpha}{I} > 1
+\end{equation}
+
+\end{frame}

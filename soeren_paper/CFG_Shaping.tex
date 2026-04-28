@@ -1,0 +1,79 @@
+\documentclass[aip,twocolumn]{revtex4-2}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{physics}
+\usepackage{siunitx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage{enumitem}
+%\setcounter{secnumdepth}{4}
+
+
+%macros for math
+\newcommand{\costh}{\ensuremath{\langle \cos^2 \theta_{\text{2D}} \rangle}}
+\newcommand{\CSS}[0]{$\mathrm{CS_2}$}
+\newcommand{\db}{\ensuremath{\Delta\beta}}
+\newcommand{\dg}{\ensuremath{\Delta\gamma}}
+\newcommand{\dt}{\ensuremath{\Delta t}}
+\newcommand{\fcfg}{\ensuremath{f_{\mathrm{CFG}}}}
+\newcommand{\fus}{\ensuremath{f_{\mathrm{us}}}}
+\newcommand{\dfus}{\ensuremath{\Delta f_{\mathrm{us}}}}
+\newcommand{\w}{\omega}
+\newcommand{\wt}{\widetilde}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\e}{\mathrm{e}}
+\renewcommand{\dd}{\mathrm{d}}
+
+%------------------------------------------------------------
+\begin{document}
+
+\title{Controlling Rotational Phase with an Optical Centrifuge}
+%---------Authors---------
+\author{Ian~MacPhail-Bartley}
+\author{Gabriel Voith}
+\author{S{\"o}ren Mahr}
+\author{Cameron E. Peters}
+\author{Valery Milner}
+\email{vmilner@phas.ubc.ca}
+
+\affiliation{$^{1}$Department of  Physics \& Astronomy, The University of British Columbia, Vancouver V6T-1Z1, Canada}
+
+\date{\today}
+
+\begin{abstract}
+\textcolor{red}{Paper will be about: full TOD description of centrifuge, monitoring and/or stabilizing the phase, truncating usCFG,improving spectral resolution of cfCFG }
+
+\end{abstract}
+
+\maketitle
+%====================================================================
+%====================================================================
+
+%====================================================================
+\input{sections/intro}
+
+
+%====================================================================
+\input{sections/truncation}
+
+%====================================================================
+\input{sections/phase}
+
+
+%====================================================================
+\input{sections/compensation}
+
+%====================================================================
+\input{sections/conclusion}
+
+
+%----------Acknowledgements -----------------------------------------
+\begin{acknowledgments}
+This research has been supported by grants from CFI, BCKDF, and NSERC, and carried out under the auspices of the UBC Centre for Research on Ultra-Cold Systems (CRUCS). The authors thank K. Wang for providing the initial schematics of the usCFG shaper. 
+\end{acknowledgments}
+%Create references using bibtex:
+\bibliography{CFG_Shaping_Bibliography}
+
+\end{document}

@@ -1,0 +1,42 @@
+\section{Introduction}
+\label{sec:Introduction}
+%----------Intro 1: What's a CFG ------------------------------------
+In a series of two recent publications~\cite{Optical-centrifuge-with2025,An-ultraslow-optical-centrifuge2025}, we introduced two methods of creating an ``optical centrifuge''~\cite{Optical-Centrifuge-for-Molecules1999} based on the method of spectral focusing\textbf{[CITE SF paper]}.   \textcolor{red}{[Introduce centrifuge, applications, limitations..]}
+
+%Needs more...
+
+%----------Intro 3: field with TOD ------------
+Up to third-order dispersion (TOD), a laser pulse can be described with instantaneous optical phase
+
+\begin{equation}
+    \label{Eq:phase}
+\varphi(t) = \varphi_0 + \omega_0 t + \beta t^2 + \gamma t^3,
+\end{equation}
+\noindent where $\varphi_0$ and $\omega_0$ are the initial optical phase and optical carrier frequency, respectively, and $\beta$ and $\gamma$ are the linear chirp and TOD parameters, respectively. Generically, the two pulses comprising the optical centrifuge can be written with instantaneous optical frequencies 
+
+\begin{equation}
+\omega_\mathrm{u}(t) = \omega_0 + 2\beta_0 t + 3 \gamma_0 t^2 
+\end{equation}
+\noindent for the ``unshaped'' pulse and
+
+\begin{align}
+\omega_\mathrm{s}(t) &= \omega_0 + 2(\beta_0 + \db)(t + \dt) \\
+&+ 3 (\gamma _0 + \dg)(t + \Delta t)^2 
+\end{align}
+
+\noindent for the ``shaped'' pulse. \dt{}, \db{}, and \dg{} represent the time delay, additional chirp rate, and additional TOD of the ``shaped'' pulse, with respect to the unshaped pulse's $\beta = \beta_0$ and $\gamma = \gamma_0$. Combining these two pulses,
+
+\begin{align}
+\label{Eq:CFG}
+\begin{split}
+\Omega (t) &= \frac{1}{2}[\omega_\mathrm{s}(t)  - \omega_\mathrm{u}(t) ]\\
+&= \beta_0 \dt + \db t + \db \dt \\
+&+ 3 \gamma_0 t \dt + \frac{3}{2} \gamma_0 (\dt)^2 \\
+&+ \frac{3}{2} \dg t^2 + 3 \dg t \Delta t + \frac{3}{2} \dg (\dt)^2
+\end{split}
+\end{align}
+
+\noindent is the centrifuge, fully accounting for third-order dispersion. The conventional optical centrifuge~\cite{Optical-Centrifuge-for-Molecules1999} operates in the regime of large \db{}, where only the second term in Eq.~\ref{Eq:CFG} is significant. In contrast, the ``constant frequency'' centrifuge~\cite{Optical-centrifuge-with2025} (cfCFG) operates with $\db, \dg \rightarrow 0$, and the baseline TOD from the laser source ($\gamma_0$) plays a significant role. For spectroscopic applications, any terms that vary with time throughout the pulse increase the effective line width of the centrifuge \textbf{[cite SF and NO Dimer]}. 
+
+The intensity profile of an accelerating optical centrifuge  can play a similar role, if not all molecules follow its accelerated rotation to the end of the pulse. The intensity profile of the centrifuge field directly affects the projection of pendular states rotating \textit{with} the polarization vector onto the field-free molecular rotational states~\cite{Observation-of-nondispersing-classical-like2015}. Intuitively, a smooth falling edge results in molecules falling out of the centrifuge at different times, with different rotational frequencies i.e. populating a superposition of several different field-free states. Conversely, truncating the field abruptly can project molecules onto a single rotational state~\cite{Observation-of-nondispersing-classical-like2015}. 
+

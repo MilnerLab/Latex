@@ -1,0 +1,7 @@
+Questions for Vienna team
+
+1. We are curious how your simulation results depend on the acceleration of the centrifuge? On slides 15-21 it seems like \Omega has no time dependence and you say the Hamiltonian in the rotating frame is time-independent, but then on slide 24 you say "Solving for eigenstates with V(t) and \Omega(t)". As a follow-up to that, we recently made our centrifuge decelerate from ~50 GHz to 10 GHz and we managed to spin both OCS and CS2 at the lower frequency portion of the centrifuge similar to the usual accelerating centrifuge (see Fig. ?). Could you also simulate a decelerating centrifuge?
+2. On slide 21, for the case of fast relaxation, do you mean to say that we recover \rho_0 at each time step (which would correspond to a different field polarization/molecular alignment direction)?
+3. Could you clarify what the assumptions t << \Omega^-1 and \tau_relax << t_exp mean and where they get used? What are t_bath and t_exp? Additionally, what do you mean by long relaxation time on slide 30, long compared to what timescale?
+4. Can you explain why the lower envelope of the simulated cs2 cos^2 signal doesn't look comparable to our empirical data? That is to say, the oscillations don't have minima going down to a constant baseline (like 0.5) in your simulation.
+5. Would it be possible for you to share your simulation program with us? Do you have it saved as a repository on GitHub? Having the .csv files from the plots you made so far would also be helpful.

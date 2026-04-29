@@ -1,12 +1,34 @@
 \documentclass[10pt]{article}
 \usepackage{graphicx}
-\usepackage{caption}
+\usepackage{xcolor}
 
 \title{Figures for manuscript}
 \date{April 29, 2026}
 \author{}
 
 \begin{document}
+
+\noindent
+Hey guys we wanted to ask some questions and give a quick idea of what figures we are planning to show in the paper. \newline
+\vskip 10pt
+\noindent
+\textbf{General questions regarding the theory:}
+\begin{itemize}
+    \item \textbf{Question 1:} We are curious how your simulation results depend on the acceleration of the centrifuge? On slides 15-21 it seems like $\Omega$ has no time dependence and you say the Hamiltonian in the rotating frame is time-independent, but then on slide 24 you say "Solving for eigenstates with V(t) and $\Omega(t)$". How we currently understand your theory there would be no difference between a decelerating and accelerating centrifuge (meaning the $cos^2$ plot would just be mirrored)? {\color{red}As a follow-up to that, we recently made our centrifuge decelerate from ~50 GHz to 10 GHz and we managed to spin both OCS and CS2 at the lower frequency portion of the centrifuge similar to the usual accelerating centrifuge (see Fig. ?).}
+    \item \textbf{Question 2:} On slide 21, for the case of fast relaxation, do you mean to say that we recover $\rho_0$ at each time step (which would correspond to a different field polarization/molecular alignment direction)?
+    \item \textbf{Question 3:} Could you clarify what the assumptions $t_{bath} << \Omega^{-1}$ and $\tau_{relax} << t_{exp}$ mean and where they get used? What are $t_{bath}$ and $t_{exp}$? Additionally, what do you mean by long relaxation time on slide 30, long compared to what timescale? And if $t_{exp}$ is the pulse duration (around 600ps) how can your theory hold for the $\tau$ values you used to compile CS2 and OCS (300ps and 900ps)?
+\end{itemize}
+\vskip 20pt
+\textbf{Questions regarding the simulations:}
+
+\begin{itemize}
+    \item \textbf{Question 4:} Can you explain why the lower envelope of the simulated $CS_2$ $cos^2\theta_{\mathrm{2D}}$ signal doesn't look comparable to our empirical data? That is to say, the oscillations don't have minima going down to a constant baseline (like 0.5) in your simulation. Whereas the lower baseline for the simulated OCS agrees with our measured data.
+\end{itemize}
+\vskip 10pt
+Would it be possible for you to share your simulation program with us? Do you have it saved as a repository on GitHub? Having the .csv files from the plots you made so far would also be helpful.
+
+\newpage
+
 \begin{figure}
 \label{cs2_jet_vs_droplet}
 \centering
@@ -14,6 +36,8 @@
 \caption{Molecular alignment of gas-phase CS2 \textbf{(a)} and CS2 molecules embedded in He droplets \textbf{(b)} to the same phase-stabilized centrifuge. The centrifuge drives the rotation of CS2 in the liquid helium environment past the centrifugal wall at 20 GHz. The size of the error bar at each probe delay corresponds to the standard error of the mean of the average $\langle\cos^2\theta_{\mathrm{2D}}\rangle(t)$ over several scans.}
 \end{figure}
 
+
+\newpage
 \begin{figure}
 \label{cs2_vs_ocs_v1}
 \centering
@@ -22,6 +46,7 @@
 \caption*{Figure 2 [option 1]: STFT of the experimental (left panel) and theoretical (right panel) $\langle\cos^2\theta_{\mathrm{2D}}\rangle(t)$ signal of molecular rotation in helium droplets of CS\textsubscript{2} \textbf{(a)} and OCS \textbf{(b)} with a higher centrifuge acceleration ($\approx 0.34$ GHz/ps), and OCS \textbf{(c)} with a lower centrifuge acceleration ($\approx 0.26$ GHz/ps). In each case, rotation persists at frequencies above the molecule's centrifugal wall, however, OCS could not be driven to as high rotational frequencies as CS\textsubscript{2}. Note that the centrifuge used in \textbf{(b)} decelerates in the beginning of the pulse before reaching 0 GHz and then accelerating. This is reflected in the corresponding spectrogram \textbf{(b)} from about -250 ps to -150 ps.}
 \end{figure}
 
+\newpage
 \begin{figure}
 \label{cs2_vs_ocs_v3}
 \centering

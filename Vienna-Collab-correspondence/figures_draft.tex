@@ -1,5 +1,6 @@
 \documentclass[10pt]{article}
 \usepackage{graphicx}
+\usepackage{caption}
 
 \title{Figures for manuscript}
 \date{April 29, 2026}
@@ -16,14 +17,16 @@
 \begin{figure}
 \label{cs2_vs_ocs_v1}
 \centering
-\includegraphics{c2t_plots/email/cs2-ocs-comparison_v1.png}
-\caption{STFT of the experimental (left panel) and theoretical (right panel) $\langle\cos^2\theta_{\mathrm{2D}}\rangle(t)$ signal of molecular rotation in helium droplets of CS\textsubscript{2} \textbf{(a)} and OCS with a higher centrifuge acceleration ($\approx 0.34$ GHz/ps), and OCS with a lower centrifuge acceleration ($\approx 0.26$ GHz/ps). In each case, rotation persists at frequencies above the molecule's centrifugal wall. Note that the centrifuge used in \textbf{(b)} decelerates in the beginning of the pulse before reaching 0 GHz, and accelerating. This is reflected in the corresponding spectrogram \textbf{b} from about -250 ps to -150 ps.}
+\includegraphics{cs2-ocs-comparison_v1.png}
+%\captionsetup{name = Figure 2 [option 1],labelsep=newline}
+\caption*{Figure 2 [option 1]: STFT of the experimental (left panel) and theoretical (right panel) $\langle\cos^2\theta_{\mathrm{2D}}\rangle(t)$ signal of molecular rotation in helium droplets of CS\textsubscript{2} \textbf{(a)} and OCS \textbf{(b)} with a higher centrifuge acceleration ($\approx 0.34$ GHz/ps), and OCS \textbf{(c)} with a lower centrifuge acceleration ($\approx 0.26$ GHz/ps). In each case, rotation persists at frequencies above the molecule's centrifugal wall, however, OCS could not be driven to as high rotational frequencies as CS\textsubscript{2}. Note that the centrifuge used in \textbf{(b)} decelerates in the beginning of the pulse before reaching 0 GHz and then accelerating. This is reflected in the corresponding spectrogram \textbf{(b)} from about -250 ps to -150 ps.}
 \end{figure}
 
 \begin{figure}
 \label{cs2_vs_ocs_v3}
 \centering
-\includegraphics{c2t_plots/email/cs2-ocs-comparison_v3.png}
-\caption{}
+\includegraphics{cs2-ocs-comparison_v3.png}
+%\captionsetup{name = Figure 2 [option 2],labelsep=newline}
+\caption*{Figure 2 [option 2]: Molecular alignment (experimental curve to be overlaid with theoretical curve) of CS\textsubscript{2} \textbf{(a)} and OCS \textbf{(b)} with a higher centrifuge acceleration ($\approx 0.34$ GHz/ps), and OCS \textbf{(c)} with a lower centrifuge acceleration ($\approx 0.26$ GHz/ps). The truncated lines plotted with respect to the right axes represent the best linear fits (only by eye for now) to the STFTs of the $\langle\cos^2\theta_{\mathrm{2D}}\rangle(t)$ curves. In each case, rotation persists at frequencies above the molecule's centrifugal wall, however, OCS could not be driven to as high rotational frequencies as CS\textsubscript{2}. Note that the centrifuge used in \textbf{(b)} decelerates in the beginning of the pulse (-250 ps to -150 ps) before reaching 0 GHz and then accelerating.}
 \end{figure}
 \end{document}

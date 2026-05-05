@@ -1,9 +1,17 @@
-\begin{frame}{Outline}
+\begin{frame}{Roadmap}
   \tableofcontents
 \end{frame}
 
 \AtBeginSection{
-  \begin{frame}{Outline}
-    \tableofcontents[currentsection]
-  \end{frame}
+  {\setbeamertemplate{footline}{}
+  \begin{frame}[plain]
+    \begin{tikzpicture}[remember picture,overlay]
+      \fill[Paper] (current page.south west) rectangle (current page.north east);
+      \fill[Accent!14] ($(current page.east)+(-0.8,0)$) circle (2.8cm);
+    \end{tikzpicture}
+    \vfill
+    {\color{Muted}\Large Section}\par\vspace{0.15cm}
+    {\Huge\bfseries\insertsection}\par
+    \vfill
+  \end{frame}}
 }

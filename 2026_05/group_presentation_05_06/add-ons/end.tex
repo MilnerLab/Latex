@@ -1,3 +1,15 @@
-\begin{frame}{Questions?}
-  \centering Thank you for your attention!
+{
+\setbeamertemplate{footline}{}
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[DeepNavy] (current page.south west) rectangle (current page.north east);
+    \fill[Accent!35] ($(current page.north east)+(-2.5,-1.1)$) circle (2.1cm);
+    \fill[AccentTwo!30] ($(current page.south west)+(1.5,0.8)$) circle (1.8cm);
+  \end{tikzpicture}
+  \vfill
+  {\color{white}\Huge\bfseries Questions?}\par
+  \vspace{0.25cm}
+  {\color{white!70}\Large Thank you for your attention.}\par
+  \vfill
 \end{frame}
+}

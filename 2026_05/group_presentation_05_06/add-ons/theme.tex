@@ -1,3 +1,88 @@
-\usetheme{Madrid}
-\setbeamertemplate{navigation symbols}{} % hide nav icons
-\setbeamertemplate{footline}[frame number] % slide numbers
+% Clean custom Beamer style: modern, warm, not overloaded.
+\usetheme{default}
+\usefonttheme{professionalfonts}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{blocks}[rounded][shadow=false]
+
+% --- Colors -------------------------------------------------
+\definecolor{DeepNavy}{HTML}{101828}
+\definecolor{SoftNavy}{HTML}{1D2939}
+\definecolor{Accent}{HTML}{8B5CF6}
+\definecolor{AccentTwo}{HTML}{06B6D4}
+\definecolor{Paper}{HTML}{F8FAFC}
+\definecolor{Muted}{HTML}{667085}
+\definecolor{Line}{HTML}{E4E7EC}
+
+\setbeamercolor{normal text}{fg=DeepNavy,bg=Paper}
+\setbeamercolor{frametitle}{fg=DeepNavy,bg=Paper}
+\setbeamercolor{title}{fg=DeepNavy}
+\setbeamercolor{subtitle}{fg=Muted}
+\setbeamercolor{author}{fg=SoftNavy}
+\setbeamercolor{institute}{fg=Muted}
+\setbeamercolor{date}{fg=Muted}
+\setbeamercolor{structure}{fg=Accent}
+\setbeamercolor{itemize item}{fg=Accent}
+\setbeamercolor{itemize subitem}{fg=AccentTwo}
+\setbeamercolor{block title}{fg=DeepNavy,bg=Line}
+\setbeamercolor{block body}{fg=DeepNavy,bg=white}
+
+% --- Typography ---------------------------------------------
+\setbeamerfont{title}{series=\bfseries,size=\Huge}
+\setbeamerfont{subtitle}{size=\large}
+\setbeamerfont{frametitle}{series=\bfseries,size=\Large}
+\setbeamerfont{framesubtitle}{size=\normalsize}
+\setbeamerfont{footline}{size=\scriptsize}
+
+% --- Frame --------------------------------------------
+\setbeamertemplate{frametitle}{%
+  \vspace{0.10cm}
+  \begin{beamercolorbox}[
+    wd=\paperwidth,
+    ht=0.95cm,
+    dp=0.15cm,
+    leftskip=0.35cm,
+    rightskip=0.5cm
+  ]{frametitle}
+    \usebeamerfont{frametitle}\insertframetitle
+    \hfill
+    \raisebox{-0.25cm}{%
+      \includegraphics[width=1.25cm]{assets/ubc-logo.pdf}%
+    }
+  \end{beamercolorbox}
+
+  \begin{tikzpicture}[remember picture, overlay]
+  \pgfmathsetmacro{\progress}{%
+    \insertframenumber/\inserttotalframenumber
+  }
+
+  % Hintergrundlinie
+  \draw[AccentTwo!20, line width=0.7pt]
+    (0.9cm,-0.05cm) -- (\paperwidth-3cm,-0.05cm);
+
+  % Fortschritt
+  \draw[Accent, line width=1.2pt]
+    (0.9cm,-0.05cm) --
+    ({0.9cm + (\paperwidth-3.9cm)*\progress},-0.05cm);
+\end{tikzpicture}
+
+  \vspace{0.10cm}
+}
+
+
+% --- Footer --------------------------------------------------
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.72\paperwidth,ht=2.5ex,dp=1.2ex,leftskip=0.7cm]{author in head/foot}%
+      \color{Muted}%
+      \insertshorttitle%
+      \ifx\insertsectionhead\empty\else%
+        \hspace{0.7em}{\color{Muted!60}|}\hspace{0.7em}%
+        {\itshape\insertsectionhead}%
+      \fi%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.28\paperwidth,ht=2.5ex,dp=1.2ex,rightskip=0.7cm plus 1fil]{date in head/foot}%
+      \hfill\color{Muted}\insertframenumber\,/\,\inserttotalframenumber
+    \end{beamercolorbox}%
+  }
+}

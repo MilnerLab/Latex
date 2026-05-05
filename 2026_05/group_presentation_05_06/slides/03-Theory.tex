@@ -22,18 +22,81 @@
     \end{block}
 \end{frame}
 \begin{frame}{Theory from Austria - What we understand!}
-    \begin{equation*}
-\makebox[\textwidth][c]{%
-  $\hat{H}_{\mathrm{lab}}(t) =
+    The Hamiltonian that describes the molecule in the centrifuge:
+     \[
+  \boxed{
+    \hat{H}_{\mathrm{lab}}(t) =
   BJ^2 + \hat{R}(t)^\dagger
-  \hat{V}_{\mathrm{drive}}\hat{R}(t)$%
+  \hat{V}_{\mathrm{drive}}\hat{R}(t) 
+  }
+  \qquad \text{with}\quad
+  \hat{R}(t) = e^{i\Omega t \hat{L}_{Z}}
+\]
+under the approximations the Lindblad equation becomes a simple Master's equation:
+\[
+\partial_t \rho_{\mathrm{lab}}(t)
+=
+i\left[\hat{H}_{\mathrm{lab}}(t), \rho_{\mathrm{lab}}(t)\right]
++
+\frac{
+\rho_{\mathrm{lab}}(t)
+-
+\frac{1}{Z}\exp\!\left[\hat{H}_{\mathrm{lab}}(t)/T\right]
+}{
+\tau_{\mathrm{relax}}
 }
-\makebox[0pt][r]{%
-  $\text{with}\quad
-  \hat{R}(t) = e^{i\Omega t \hat{L}_{Z}}$%
-}
-\end{equation*}
+\]
 
+\end{frame}
+
+\begin{frame}{Theory from Austria - What we understand!}
+   
+    \begin{block}{In the rotating frame $\hat{H}$ is time-independent}
+        \[
+  \boxed{
+    \hat{H}_{\mathrm{rot}} =
+  BJ^2 + \hat{V}_{\mathrm{drive}} - \Omega \hat{L}_Z
+  }
+\]
+The Master's equation simplifies to:
+\[
+\partial_t \rho_{\mathrm{rot}}
+=
+i\left[\hat{H}_{\mathrm{rot}}, \rho_{\mathrm{rot}}\right]
++
+\frac{
+\rho_{\mathrm{rot}} - \rho_0
+}{
+\tau_{\mathrm{relax}}
+}
+\]
+where $\rho_0$ is the density matrix of the non-rotating drive
+\[
+\rho_0
+=
+\frac{1}{Z}
+\exp\!\left[
+\left(
+BJ^2 + \hat{V}_{\mathrm{drive}}
+\right)/T
+\right]
+\]
+    \end{block}
+
+\end{frame}
+\begin{frame}{Theory from Austria - What we understand!}
+    \begin{bigidea}{What does that mean for the oscillations?}
+        \begin{itemize}
+            \item \textbf{Fast relaxation:} the density matrix of the non-rotating drive is recovered as the bath thermalizes at each direction
+            \begin{itemize}
+                \item strong signal in $cos^2(\theta)$
+            \end{itemize}
+            \item \textbf{Slow relaxation:} the eigenfunktions of $\hat{H}_{\mathrm{rot}}$ are more deformed $\rightarrow$ localization for high rotational speed
+            \begin{itemize}
+                \item lower signal in $cos^2(\theta)$
+            \end{itemize}
+        \end{itemize}
+    \end{bigidea}
 \end{frame}
 \begin{frame}{Comparing Theory and Experiment}
     \begin{figure}

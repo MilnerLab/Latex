@@ -1,3 +1,32 @@
-\begin{frame}
-  \titlepage
+{
+\setbeamertemplate{footline}{}
+\begin{frame}[plain, noframenumbering]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[Paper] (current page.south west) rectangle (current page.north east);
+
+    % Institution banner. Replace this file if you want a different logo/banner.
+    \node[anchor=north west,inner sep=0pt]
+      at ($(current page.north west)+(0.72cm,-0.62cm)$)
+      {\includegraphics[width=0.68\paperwidth]{assets/banner.png}};
+
+    % Subtle separator line below the banner.
+    \draw[Accent,line width=1.2pt]
+      ($(current page.north west)+(0.72cm,-3.02cm)$) --
+      ($(current page.north east)+(-0.72cm,-3.02cm)$);
+  \end{tikzpicture}
+
+  \vspace{3.55cm}
+  {\usebeamerfont{title}\inserttitle\par}
+  \vspace{0.18cm}
+  {\usebeamerfont{subtitle}\color{Muted}\insertsubtitle\par}
+
+  \vfill
+  \begin{minipage}{0.68\textwidth}
+    {\usebeamerfont{author}\insertauthor\par}
+    \vspace{0.1cm}
+    {\usebeamerfont{institute}\insertinstitute\par}
+    \vspace{0.1cm}
+    {\usebeamerfont{date}\insertdate\par}
+  \end{minipage}
 \end{frame}
+}
